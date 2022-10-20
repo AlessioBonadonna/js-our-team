@@ -51,18 +51,31 @@ for(let element of team){
         
         for(let key in element){
         console.log(`${key}: ${element[key]}`);
-        card.innerHTML=`
+        card.innerHTML=
+        `
         
         <img class="rounded-4" class="h-50" src="./img/${element.image}" alt="${element.image}">
         <h3>${element.nome}</h3>
         <p>${element.ruolo}</p>
         
-
         `
     }
 }
-//   MILESTONE 2:
-// Stampare le stesse informazioni su DOM sottoforma di stringhe
+//pushare i valori di un form dentro al array team per creare un nuovo elemento del team
+function creaPersona(){
+    let nomeAgg=document.getElementById("nomeCognome").value
+    let occupazione=document.getElementById("lavoro").value
+    let elemento={
+        nome:"`${nomeAgg}`",
+        ruolo: "`${occupazione}`",
+    
+        image: "sconosciuto.jpeg"
+ }
+ team.push(elemento);
+}
+let btn=document.getElementById('avvia');
+btn.addEventListener('click',creaPersona);
+    
 
    
         
