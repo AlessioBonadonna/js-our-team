@@ -1,3 +1,18 @@
 body{
-    background-color: red;
+   background-color: beige;
+}
+/* .rosso{
+    width:250px;
+    height: 250px;
+    background-color: blue;
+} */
+.display-block{
+    display:inline-block
+}
+.biege{
+    background-color: beige;
+}
+img:hover{
+    opacity: 80%;
+    filter: blur(2px);
 }

@@ -25,7 +25,7 @@ let team=[
     {
         nome:"Scott Estrada",
         ruolo:"Developer",
-       image:"scott-estrada-developer.jpg"
+        image:"scott-estrada-developer.jpg"
     },
     {
         nome:"Barbara Ramos ",
@@ -35,10 +35,34 @@ let team=[
 ]
 console.log(team);
 //Stampare su console le informazioni di nome, ruolo e la stringa della foto
+//header contenuto 
+let header=document.querySelector("header");
+header.classList.add("container","text-center","text-dark","biege","p-3","mt-5","rounded-4")
+//.container css e contenuti
+let container=document.getElementById('container');
+container.classList.add("d-flex","container","flex-wrap","biege","text-dark","mt-1" ,"py-4","rounded-4");
+
+
 for(let element of team){
-    for(let key in element){
+    let card =document.createElement('div');
+    card.classList.add("text-center","col-4","h-50" ,"text-dark","rounded-3","p-2");
+    
+    container.append(card);
+        
+        for(let key in element){
         console.log(`${key}: ${element[key]}`);
+        card.innerHTML=`
+        
+        <img class="rounded-4" class="h-50" src="./img/${element.image}" alt="${element.image}">
+        <h3>${element.nome}</h3>
+        <p>${element.ruolo}</p>
+        
+
+        `
     }
 }
 //   MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+   
+        
