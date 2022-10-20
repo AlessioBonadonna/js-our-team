@@ -1,13 +1,16 @@
+:root {
+    --background-color: #000000;
+    --color: #000000;
+    --light-theme: #ffffff;
+  }
+
 body{
    background-color: beige;
+   font-family: 'Source Sans Pro', sans-serif;
 }
-/* .rosso{
-    width:250px;
-    height: 250px;
-    background-color: blue;
-} */
+
 .display-block{
-    display:inline-block
+    display:block
 }
 .biege{
     background-color: beige;
@@ -15,4 +18,16 @@ body{
 img:hover{
     opacity: 80%;
     filter: blur(2px);
+    cursor:pointer;
+}
+.container div:hover{
+color:blue;
+}
+
+input{
+    padding:10px;
+  border:0;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+ 
+  border-radius:10px;
 }
